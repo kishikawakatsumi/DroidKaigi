@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14BA511B1E7077EF00E131CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA511A1E7077EF00E131CC /* AppDelegate.swift */; };
+		14BA51221E7077EF00E131CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BA51201E7077EF00E131CC /* Main.storyboard */; };
+		14BA51241E7077EF00E131CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BA51231E7077EF00E131CC /* Assets.xcassets */; };
+		14BA51271E7077EF00E131CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BA51251E7077EF00E131CC /* LaunchScreen.storyboard */; };
+		14BA512F1E70789400E131CC /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA512E1E70789400E131CC /* SessionsViewController.swift */; };
+		14BA51311E7078C100E131CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51301E7078C100E131CC /* MapViewController.swift */; };
+		14BA51331E7078CC00E131CC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51321E7078CC00E131CC /* InformationViewController.swift */; };
+		14BA51351E7078DD00E131CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51341E7078DD00E131CC /* SettingsViewController.swift */; };
+		14BA51371E707DD800E131CC /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51361E707DD800E131CC /* SessionsView.swift */; };
+		14BA51391E707DF000E131CC /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51381E707DF000E131CC /* SessionView.swift */; };
+		14BA513B1E70802700E131CC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513A1E70802700E131CC /* Session.swift */; };
+		14BA513D1E70865B00E131CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513C1E70865B00E131CC /* Room.swift */; };
+		14BA513F1E70868600E131CC /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513E1E70868600E131CC /* Speaker.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14BA51171E7077EF00E131CC /* DroidKaigi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidKaigi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BA511A1E7077EF00E131CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14BA51211E7077EF00E131CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14BA51231E7077EF00E131CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14BA51261E7077EF00E131CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14BA51281E7077EF00E131CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14BA512E1E70789400E131CC /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		14BA51301E7078C100E131CC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		14BA51321E7078CC00E131CC /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		14BA51341E7078DD00E131CC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		14BA51361E707DD800E131CC /* SessionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
+		14BA51381E707DF000E131CC /* SessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		14BA513A1E70802700E131CC /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		14BA513C1E70865B00E131CC /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		14BA513E1E70868600E131CC /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14BA51141E7077EE00E131CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14BA510E1E7077EE00E131CC = {
+			isa = PBXGroup;
+			children = (
+				14BA51191E7077EF00E131CC /* DroidKaigi */,
+				14BA51181E7077EF00E131CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14BA51181E7077EF00E131CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14BA51171E7077EF00E131CC /* DroidKaigi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14BA51191E7077EF00E131CC /* DroidKaigi */ = {
+			isa = PBXGroup;
+			children = (
+				14BA511A1E7077EF00E131CC /* AppDelegate.swift */,
+				14BA512E1E70789400E131CC /* SessionsViewController.swift */,
+				14BA51361E707DD800E131CC /* SessionsView.swift */,
+				14BA51381E707DF000E131CC /* SessionView.swift */,
+				14BA513A1E70802700E131CC /* Session.swift */,
+				14BA513C1E70865B00E131CC /* Room.swift */,
+				14BA513E1E70868600E131CC /* Speaker.swift */,
+				14BA51301E7078C100E131CC /* MapViewController.swift */,
+				14BA51321E7078CC00E131CC /* InformationViewController.swift */,
+				14BA51341E7078DD00E131CC /* SettingsViewController.swift */,
+				14BA51251E7077EF00E131CC /* LaunchScreen.storyboard */,
+				14BA51201E7077EF00E131CC /* Main.storyboard */,
+				14BA51231E7077EF00E131CC /* Assets.xcassets */,
+				14BA51281E7077EF00E131CC /* Info.plist */,
+			);
+			path = DroidKaigi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14BA51161E7077EE00E131CC /* DroidKaigi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14BA512B1E7077EF00E131CC /* Build configuration list for PBXNativeTarget "DroidKaigi" */;
+			buildPhases = (
+				14BA51131E7077EE00E131CC /* Sources */,
+				14BA51141E7077EE00E131CC /* Frameworks */,
+				14BA51151E7077EE00E131CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroidKaigi;
+			productName = DroidKaigi;
+			productReference = 14BA51171E7077EF00E131CC /* DroidKaigi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14BA510F1E7077EE00E131CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kishikawa Katsumi";
+				TargetAttributes = {
+					14BA51161E7077EE00E131CC = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 27AEDK3C9F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 14BA51121E7077EE00E131CC /* Build configuration list for PBXProject "DroidKaigi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14BA510E1E7077EE00E131CC;
+			productRefGroup = 14BA51181E7077EF00E131CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14BA51161E7077EE00E131CC /* DroidKaigi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14BA51151E7077EE00E131CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BA51271E7077EF00E131CC /* LaunchScreen.storyboard in Resources */,
+				14BA51241E7077EF00E131CC /* Assets.xcassets in Resources */,
+				14BA51221E7077EF00E131CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14BA51131E7077EE00E131CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14BA51391E707DF000E131CC /* SessionView.swift in Sources */,
+				14BA512F1E70789400E131CC /* SessionsViewController.swift in Sources */,
+				14BA51371E707DD800E131CC /* SessionsView.swift in Sources */,
+				14BA511B1E7077EF00E131CC /* AppDelegate.swift in Sources */,
+				14BA513B1E70802700E131CC /* Session.swift in Sources */,
+				14BA513D1E70865B00E131CC /* Room.swift in Sources */,
+				14BA51311E7078C100E131CC /* MapViewController.swift in Sources */,
+				14BA513F1E70868600E131CC /* Speaker.swift in Sources */,
+				14BA51331E7078CC00E131CC /* InformationViewController.swift in Sources */,
+				14BA51351E7078DD00E131CC /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14BA51201E7077EF00E131CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BA51211E7077EF00E131CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14BA51251E7077EF00E131CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14BA51261E7077EF00E131CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14BA51291E7077EF00E131CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14BA512A1E7077EF00E131CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		14BA512C1E7077EF00E131CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27AEDK3C9F;
+				INFOPLIST_FILE = DroidKaigi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kishikawakatsumi.DroidKaigi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		14BA512D1E7077EF00E131CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 27AEDK3C9F;
+				INFOPLIST_FILE = DroidKaigi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kishikawakatsumi.DroidKaigi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14BA51121E7077EE00E131CC /* Build configuration list for PBXProject "DroidKaigi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BA51291E7077EF00E131CC /* Debug */,
+				14BA512A1E7077EF00E131CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14BA512B1E7077EF00E131CC /* Build configuration list for PBXNativeTarget "DroidKaigi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14BA512C1E7077EF00E131CC /* Debug */,
+				14BA512D1E7077EF00E131CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14BA510F1E7077EE00E131CC /* Project object */;
+}

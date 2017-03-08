@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1dA-C3-ZDN" kind="relationship" relationship="viewControllers" id="DC9-fF-8HT"/>
+                        <segue destination="A9i-yA-txa" kind="relationship" relationship="viewControllers" id="ci9-wm-k5m"/>
+                        <segue destination="v7s-kj-133" kind="relationship" relationship="viewControllers" id="lAk-0S-GuX"/>
+                        <segue destination="dya-CQ-cMP" kind="relationship" relationship="viewControllers" id="wEg-ig-zA7"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="VFK-Cz-ICf">
+            <objects>
+                <tableViewController id="qYr-1d-r4G" customClass="InformationViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="34F-1s-L00">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="H9e-ge-WAA">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="qYr-1d-r4G" id="1Pb-jJ-NKb"/>
+                            <outlet property="delegate" destination="qYr-1d-r4G" id="ZOM-V9-2jP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Information" id="J8c-tB-JWN"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ozg-kg-K1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="958"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="sV7-iS-vnL">
+            <objects>
+                <tableViewController id="RNw-nq-cpv" customClass="SettingsViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZL8-l3-A1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Kx6-vZ-Wdi">
+                                <cells/>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="RNw-nq-cpv" id="5y3-xa-g2Z"/>
+                            <outlet property="delegate" destination="RNw-nq-cpv" id="o5O-vx-FW8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="1Sz-HU-rcJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JEj-aX-PEy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="1670"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="RAI-Bd-XoA">
+            <objects>
+                <navigationController id="dya-CQ-cMP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" id="Xup-vQ-9O7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="C7y-2U-gWv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="RNw-nq-cpv" kind="relationship" relationship="rootViewController" id="xZ6-Sj-o6f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yNE-W4-nXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="1670"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="V47-Mj-QzK">
+            <objects>
+                <navigationController id="v7s-kj-133" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Information" id="PSR-Pa-RHm"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yiJ-BG-f0o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qYr-1d-r4G" kind="relationship" relationship="rootViewController" id="Lvp-FR-9Il"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6T4-ys-4BW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="958"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="9zv-ff-VH4">
+            <objects>
+                <navigationController id="A9i-yA-txa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" id="kzk-ph-Qje"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kQT-Rg-FwN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hIT-1y-eoK" kind="relationship" relationship="rootViewController" id="Uba-BA-GRB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sdp-5U-jHT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="846" y="231"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Tz4-6K-d5o">
+            <objects>
+                <viewController id="hIT-1y-eoK" customClass="MapViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m8c-tm-bwC"/>
+                        <viewControllerLayoutGuide type="bottom" id="ccX-tW-lLO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WyC-ay-IX8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dOK-9p-NuA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tlB-vk-iTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="231"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="gSb-Nz-MWy">
+            <objects>
+                <navigationController id="1dA-C3-ZDN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sessions" id="L4p-vB-qVO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R6n-CN-aP7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="c9D-Cp-fdM" kind="relationship" relationship="rootViewController" id="H8m-lY-F8j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="120-li-2t6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="-452"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="dPE-8a-emP">
+            <objects>
+                <viewController id="c9D-Cp-fdM" customClass="SessionsViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAZ-0s-3lc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qfZ-wt-mHb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bNi-9F-6Ms">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sessions" id="ydc-It-kPI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="415-k9-xl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1794" y="-452"/>
+        </scene>
+    </scenes>
+</document>
