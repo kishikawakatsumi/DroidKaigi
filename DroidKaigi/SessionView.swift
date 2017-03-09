@@ -111,7 +111,7 @@ class SessionView: UIView {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let time = session.startTime.timeIntervalSinceNow
+        let time = session.startTime.timeIntervalSinceNow - 10 * 60// before 10min
         if time < 0 {
             return
         }
