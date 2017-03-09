@@ -20,6 +20,7 @@
 		14BA513B1E70802700E131CC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513A1E70802700E131CC /* Session.swift */; };
 		14BA513D1E70865B00E131CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513C1E70865B00E131CC /* Room.swift */; };
 		14BA513F1E70868600E131CC /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513E1E70868600E131CC /* Speaker.swift */; };
+		DCD5FE701E7140CB00D15DE4 /* floormap.png in Resources */ = {isa = PBXBuildFile; fileRef = DCD5FE6F1E7140CB00D15DE4 /* floormap.png */; };
 		EFF021DB1E71012700B88231 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = EFF021DA1E71012700B88231 /* check.png */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		14BA513A1E70802700E131CC /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		14BA513C1E70865B00E131CC /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		14BA513E1E70868600E131CC /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
+		DCD5FE6F1E7140CB00D15DE4 /* floormap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = floormap.png; sourceTree = "<group>"; };
 		EFF021DA1E71012700B88231 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 				14BA51231E7077EF00E131CC /* Assets.xcassets */,
 				14BA51281E7077EF00E131CC /* Info.plist */,
 				EFF021DA1E71012700B88231 /* check.png */,
+				DCD5FE6F1E7140CB00D15DE4 /* floormap.png */,
 			);
 			path = DroidKaigi;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			files = (
 				14BA51271E7077EF00E131CC /* LaunchScreen.storyboard in Resources */,
 				EFF021DB1E71012700B88231 /* check.png in Resources */,
+				DCD5FE701E7140CB00D15DE4 /* floormap.png in Resources */,
 				14BA51241E7077EF00E131CC /* Assets.xcassets in Resources */,
 				14BA51221E7077EF00E131CC /* Main.storyboard in Resources */,
 			);
