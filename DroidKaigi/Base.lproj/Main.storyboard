@@ -235,7 +235,13 @@
                             <constraint firstItem="gtD-f4-IYa" firstAttribute="top" secondItem="MGI-XI-uUg" secondAttribute="top" id="ynX-s0-NR3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="dOK-9p-NuA"/>
+                    <navigationItem key="navigationItem" title="Map" id="dOK-9p-NuA">
+                        <barButtonItem key="rightBarButtonItem" title="route" id="Ifq-sQ-Cq0">
+                            <connections>
+                                <action selector="didTapRouteButton:" destination="hIT-1y-eoK" id="UUy-j8-3d6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlB-vk-iTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
