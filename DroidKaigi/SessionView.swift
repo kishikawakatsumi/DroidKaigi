@@ -126,7 +126,7 @@ class SessionView: UIView {
             let center = UNUserNotificationCenter.current()
             
             let content = UNMutableNotificationContent()
-            content.title = "Droid Kaigi"
+            content.title = session.room?.name ?? "DroidKaigi"
             content.body = self.session.title
             content.sound = UNNotificationSound.default()
             let trigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
