@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 let timeFormatter: DateFormatter = {
     let dateFormatter = DateFormatter()
@@ -23,6 +24,7 @@ class SessionView: UIView {
     var titleLabel = UILabel()
     var languageLabel = UILabel()
     var nameLabel = UILabel()
+    var checkImageView = UIImageView(image: UIImage(named: "check"))
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -48,12 +50,15 @@ class SessionView: UIView {
         nameLabel.textColor = .lightGray
 
         titleLabel.numberOfLines = 3
+        
+        checkImageView.isHidden = true
 
         addSubview(topicView)
         addSubview(timeLabel)
         addSubview(titleLabel)
         addSubview(languageLabel)
         addSubview(nameLabel)
+        addSubview(checkImageView)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -66,6 +71,7 @@ class SessionView: UIView {
             titleLabel.text = session.title
             languageLabel.text = session.language?.uppercased()
             nameLabel.text = session.speaker?.name
+            checkImageView.isHidden = !session.isNotify
         }
     }
 
@@ -98,6 +104,36 @@ class SessionView: UIView {
             var size = nameLabel.sizeThatFits(nameLabel.bounds.size)
             size.width = bounds.width - 4 * 2
             nameLabel.frame.size = size
+        }
+        do {
+            checkImageView.frame = CGRect(x: 4, y: nameLabel.frame.maxY + 2, width: 24, height: 24)
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let time = session.startTime.timeIntervalSinceNow
+        if time < 0 {
+            return
+        }
+        
+        if session.isNotify {
+            let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: [session.notificationId])
+            self.checkImageView.isHidden = true
+            session.isNotify = false
+        }
+        else {
+            let center = UNUserNotificationCenter.current()
+            
+            let content = UNMutableNotificationContent()
+            content.title = "Droid Kaigi"
+            content.body = self.session.title
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
+            let request = UNNotificationRequest(identifier: session.notificationId, content: content, trigger: trigger)
+            center.add(request)
+            
+            session.isNotify = true
+            self.checkImageView.isHidden = false
         }
     }
 }
