@@ -60,6 +60,7 @@ class Session {
     let duration: Int
     let type: String
     let language: String?
+    var isNotify: Bool
 
     var coordinate: (x: Int, y: Int) {
         let diff = startTime.timeIntervalSinceReferenceDate - zeroDatetime.timeIntervalSinceReferenceDate
@@ -77,6 +78,12 @@ class Session {
             }
         }
         return (0, y)
+    }
+    
+    var notificationId: String {
+        get {
+            return "sessionid-\(id)"
+        }
     }
 
     var height: Int {
@@ -122,6 +129,7 @@ class Session {
         self.duration = duration
         self.type = type
         self.language = language
+        self.isNotify = false
     }
 
 }

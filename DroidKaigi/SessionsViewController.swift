@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class SyncScrollView: UIScrollView, UIGestureRecognizerDelegate {
 
@@ -50,6 +51,14 @@ class SessionsViewController: UIViewController, UIGestureRecognizerDelegate {
             if let data = data {
                 let sessions = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
 
+                var requests: [UNNotificationRequest]?
+                let semaphore = DispatchSemaphore(value: 0)
+                UNUserNotificationCenter.current().getPendingNotificationRequests {
+                    requests = $0
+                    semaphore.signal()
+                }
+                semaphore.wait()
+                
                 DispatchQueue.main.async {
                     var maxWidth: CGFloat = 0.0
                     var maxHeight: CGFloat = 0.0
@@ -59,6 +68,9 @@ class SessionsViewController: UIViewController, UIGestureRecognizerDelegate {
                     var origin: CGFloat = 0.0
                     for session in sessions {
                         let session = Session(session: session)
+                        if let _ = requests?.filter({ $0.identifier == session.notificationId }).first {
+                            session.isNotify = true
+                        }
 
                         let size = self.view.bounds.size
                         let width = size.width / 10 * 3
