@@ -132,9 +132,28 @@ class SessionsViewController: UIViewController, UIGestureRecognizerDelegate {
                         self.headerScrollView.addSubview(label)
                     }
                     self.headerScrollView.contentSize.width = self.scrollView.contentSize.width
+                    
+                    self.scrollToCurrentTimeSession()
                 }
             }
         }.resume()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.scrollToCurrentTimeSession()
+    }
+    
+    private func scrollToCurrentTimeSession() {
+        var latestPastSessionView: SessionView?
+        self.scrollView.subviews.flatMap{ $0 as? SessionView }.forEach {
+            if Date().compare($0.session.endTime) == .orderedDescending {
+                latestPastSessionView = $0
+            }
+        }
+        
+        if let latestPastSessionView = latestPastSessionView {
+            self.scrollView.setContentOffset(CGPoint(x: 0, y: latestPastSessionView.frame.maxY), animated: true)
+        }
+    }
 }
