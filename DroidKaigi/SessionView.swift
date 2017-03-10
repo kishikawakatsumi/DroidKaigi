@@ -24,7 +24,10 @@ class SessionView: UIView {
     var titleLabel = UILabel()
     var languageLabel = UILabel()
     var nameLabel = UILabel()
+    var button = UIButton(type: .custom)
     var checkImageView = UIImageView(image: UIImage(named: "check"))
+
+    var tapHandler: ((_ session: Session) -> ())?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,6 +53,10 @@ class SessionView: UIView {
         nameLabel.textColor = .lightGray
 
         titleLabel.numberOfLines = 3
+
+        button.frame = bounds
+        button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        button.addTarget(self, action: #selector(buttonTapped(button:)), for: .touchUpInside)
         
         checkImageView.isHidden = true
 
@@ -58,6 +65,7 @@ class SessionView: UIView {
         addSubview(titleLabel)
         addSubview(languageLabel)
         addSubview(nameLabel)
+        addSubview(button)
         addSubview(checkImageView)
     }
 
@@ -108,6 +116,10 @@ class SessionView: UIView {
         do {
             checkImageView.frame = CGRect(x: 4, y: nameLabel.frame.maxY + 2, width: 24, height: 24)
         }
+    }
+
+    func buttonTapped(button: UIButton) {
+        tapHandler?(session)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

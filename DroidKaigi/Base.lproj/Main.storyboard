@@ -283,6 +283,100 @@
             </objects>
             <point key="canvasLocation" x="1794" y="-452"/>
         </scene>
+        <!--Session Detail View Controller-->
+        <scene sceneID="E5g-wj-0lH">
+            <objects>
+                <viewController storyboardIdentifier="SessionDetailViewController" id="BnP-Yt-goc" customClass="SessionDetailViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ObV-xw-uGg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lgq-1j-cBB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YHH-ok-aDm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mar 9, 2017, 18:00〜18:30 (30 min)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOv-Nd-eMN">
+                                <rect key="frame" x="16" y="72" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmo-HF-4V4">
+                                <rect key="frame" x="16" y="94.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JAf-RQ-219">
+                                <rect key="frame" x="16" y="129" width="343" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiN-0t-knu">
+                                <rect key="frame" x="16" y="208.5" width="343" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quq-AY-hax">
+                                <rect key="frame" x="16" y="164" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caG-N3-3dG">
+                                <rect key="frame" x="16" y="243.5" width="343" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dop-Vz-Neg">
+                                <rect key="frame" x="16" y="278" width="343" height="30"/>
+                                <state key="normal" title="Send Feedback"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="caG-N3-3dG" firstAttribute="top" secondItem="HiN-0t-knu" secondAttribute="bottom" constant="8" id="1hv-wr-SZh"/>
+                            <constraint firstItem="quq-AY-hax" firstAttribute="top" secondItem="JAf-RQ-219" secondAttribute="bottom" constant="8" id="2Q1-9O-TMQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dop-Vz-Neg" secondAttribute="trailing" constant="16" id="3tw-3O-PjK"/>
+                            <constraint firstItem="Lgq-1j-cBB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dop-Vz-Neg" secondAttribute="bottom" constant="20" id="AaK-jZ-g2a"/>
+                            <constraint firstAttribute="trailing" secondItem="HiN-0t-knu" secondAttribute="trailing" constant="16" id="Faw-79-zpc"/>
+                            <constraint firstItem="JAf-RQ-219" firstAttribute="top" secondItem="rmo-HF-4V4" secondAttribute="bottom" constant="20" id="K8h-eZ-h1V"/>
+                            <constraint firstItem="quq-AY-hax" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="R13-Of-Hwk"/>
+                            <constraint firstItem="HiN-0t-knu" firstAttribute="top" secondItem="quq-AY-hax" secondAttribute="bottom" constant="30" id="TRK-5Y-WQk"/>
+                            <constraint firstAttribute="trailing" secondItem="caG-N3-3dG" secondAttribute="trailing" constant="16" id="WMs-6L-hhh"/>
+                            <constraint firstItem="cOv-Nd-eMN" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="WXS-RW-gNd"/>
+                            <constraint firstAttribute="trailing" secondItem="JAf-RQ-219" secondAttribute="trailing" constant="16" id="bgo-En-0qS"/>
+                            <constraint firstItem="JAf-RQ-219" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="c3o-u8-HP2"/>
+                            <constraint firstItem="caG-N3-3dG" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="eoD-nN-ga1"/>
+                            <constraint firstItem="rmo-HF-4V4" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="ghW-Wy-qMx"/>
+                            <constraint firstItem="dop-Vz-Neg" firstAttribute="top" secondItem="caG-N3-3dG" secondAttribute="bottom" constant="20" id="gtt-kB-gl1"/>
+                            <constraint firstAttribute="trailing" secondItem="quq-AY-hax" secondAttribute="trailing" constant="16" id="lCf-my-zWH"/>
+                            <constraint firstItem="dop-Vz-Neg" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="nku-aw-B0u"/>
+                            <constraint firstItem="cOv-Nd-eMN" firstAttribute="top" secondItem="ObV-xw-uGg" secondAttribute="bottom" constant="8" id="qwM-9k-PLA"/>
+                            <constraint firstItem="HiN-0t-knu" firstAttribute="leading" secondItem="YHH-ok-aDm" secondAttribute="leading" constant="16" id="rW3-xR-oN1"/>
+                            <constraint firstItem="rmo-HF-4V4" firstAttribute="top" secondItem="cOv-Nd-eMN" secondAttribute="bottom" constant="8" id="rmL-vz-954"/>
+                            <constraint firstAttribute="trailing" secondItem="rmo-HF-4V4" secondAttribute="trailing" constant="16" id="tJf-N0-Z1V"/>
+                            <constraint firstAttribute="trailing" secondItem="cOv-Nd-eMN" secondAttribute="trailing" constant="16" id="xqs-wk-Hrm"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="cOv-Nd-eMN" id="D7O-d7-ot2"/>
+                        <outlet property="descriptionLabel" destination="caG-N3-3dG" id="3T0-An-khG"/>
+                        <outlet property="descriptionTitleLabel" destination="HiN-0t-knu" id="3L9-P6-Q20"/>
+                        <outlet property="feedbackButton" destination="dop-Vz-Neg" id="eJb-Q5-FEd"/>
+                        <outlet property="roomLabel" destination="rmo-HF-4V4" id="fBp-HJ-aQf"/>
+                        <outlet property="speakerNameLabel" destination="quq-AY-hax" id="UuU-ba-6ty"/>
+                        <outlet property="speakerTitleLabel" destination="JAf-RQ-219" id="gJR-Wj-VNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUj-h9-wb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2632.8000000000002" y="-452.02398800599701"/>
+        </scene>
     </scenes>
     <resources>
         <image name="floormap.png" width="1060" height="410"/>
