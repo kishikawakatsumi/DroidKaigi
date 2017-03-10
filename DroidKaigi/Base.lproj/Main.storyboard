@@ -264,7 +264,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dGb-CU-CqQ" detailTextLabel="yC2-Nt-aO0" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="glb-1Z-cyz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="dGb-CU-CqQ" detailTextLabel="yC2-Nt-aO0" rowHeight="66" style="IBUITableViewCellStyleSubtitle" id="glb-1Z-cyz">
                                         <rect key="frame" x="0.0" y="574" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="glb-1Z-cyz" id="MRq-nM-Vfi">
@@ -297,6 +297,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Information" id="J8c-tB-JWN"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="yC2-Nt-aO0" id="5Tv-e3-OZc"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozg-kg-K1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

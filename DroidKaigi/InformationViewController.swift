@@ -20,10 +20,15 @@ class InformationViewController: UITableViewController {
         case devInfo
     }
     
+    @IBOutlet weak var versionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        if let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String {
+            versionLabel.text = "Version \(version)"
+        }
     }
 
     override func didReceiveMemoryWarning() {
