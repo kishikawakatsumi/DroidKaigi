@@ -56,6 +56,17 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhT-U4-k1e">
+                                    <rect key="frame" x="65" y="192" width="36" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="36" id="6tp-qU-00B"/>
+                                        <constraint firstAttribute="height" constant="36" id="OmL-QX-fT8"/>
+                                    </constraints>
+                                    <state key="normal" title="Button" image="ic_twitter.png"/>
+                                    <connections>
+                                        <action selector="didTapTwitterButton:" destination="qYr-1d-r4G" eventType="touchUpInside" id="tYc-7A-qjF"/>
+                                    </connections>
+                                </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flr-Bd-sYf">
                                     <rect key="frame" x="117" y="191" width="36" height="36"/>
                                     <constraints>
@@ -63,6 +74,9 @@
                                         <constraint firstAttribute="width" constant="36" id="otV-Sl-RiM"/>
                                     </constraints>
                                     <state key="normal" title="Button" image="ic_facebook.png"/>
+                                    <connections>
+                                        <action selector="didTapFacebookButton:" destination="qYr-1d-r4G" eventType="touchUpInside" id="FV0-vE-gxK"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-fF-jyR">
                                     <rect key="frame" x="169" y="191.5" width="36" height="36"/>
@@ -71,6 +85,9 @@
                                         <constraint firstAttribute="width" constant="36" id="o54-9s-LSM"/>
                                     </constraints>
                                     <state key="normal" title="Button" image="ic_github.png"/>
+                                    <connections>
+                                        <action selector="didTapGithubButton:" destination="qYr-1d-r4G" eventType="touchUpInside" id="0j9-v0-shi"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e3-By-YY3">
                                     <rect key="frame" x="221" y="191" width="36" height="36"/>
@@ -79,6 +96,9 @@
                                         <constraint firstAttribute="height" constant="36" id="Dw9-C5-bnW"/>
                                     </constraints>
                                     <state key="normal" title="Button" image="ic_droidkaigi.png"/>
+                                    <connections>
+                                        <action selector="didTapDroidKaigiButton:" destination="qYr-1d-r4G" eventType="touchUpInside" id="Mmh-or-22Z"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPA-HW-fDj">
                                     <rect key="frame" x="273" y="191" width="36" height="36"/>
@@ -87,22 +107,17 @@
                                         <constraint firstAttribute="height" constant="36" id="ioI-15-2fb"/>
                                     </constraints>
                                     <state key="normal" title="Button" image="ic_youtube.png"/>
+                                    <connections>
+                                        <action selector="didTapYoutubeButton:" destination="qYr-1d-r4G" eventType="touchUpInside" id="NGU-Ne-AOb"/>
+                                    </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwP-UL-6rh">
-                                    <rect key="frame" x="0.0" y="243.5" width="375" height="0.5"/>
+                                    <rect key="frame" x="0.0" y="243" width="375" height="0.5"/>
                                     <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="0.5" id="KUD-fw-det"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LhT-U4-k1e">
-                                    <rect key="frame" x="65" y="192" width="36" height="36"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="36" id="6tp-qU-00B"/>
-                                        <constraint firstAttribute="height" constant="36" id="OmL-QX-fT8"/>
-                                    </constraints>
-                                    <state key="normal" title="Button" image="ic_twitter.png"/>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -133,11 +148,11 @@
                                         <rect key="frame" x="0.0" y="244" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GZQ-fO-Cpa" id="zCz-ME-75P">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="スポンサー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="stz-Cy-jCs">
-                                                    <rect key="frame" x="15" y="10" width="72" height="17"/>
+                                                    <rect key="frame" x="15" y="10" width="71.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,11 +172,11 @@
                                         <rect key="frame" x="0.0" y="310" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U54-yc-BSN" id="4kS-7G-Qy4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="アンケート" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1jy-tE-c8K">
-                                                    <rect key="frame" x="15" y="10" width="72" height="17"/>
+                                                    <rect key="frame" x="15" y="10" width="71.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,18 +196,18 @@
                                         <rect key="frame" x="0.0" y="376" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1FD-uE-L6l" id="CSU-mE-Nsj">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="コントリビュータ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="k8Z-82-XXe">
-                                                    <rect key="frame" x="15" y="17" width="115" height="17"/>
+                                                    <rect key="frame" x="15" y="17" width="114.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="このアプリの素晴らしいコントリビュータの方達です。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y8X-PA-9XU">
-                                                    <rect key="frame" x="15" y="34" width="307" height="15"/>
+                                                    <rect key="frame" x="15" y="34" width="306.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,7 +220,7 @@
                                         <rect key="frame" x="0.0" y="442" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CCI-wy-VZA" id="Oji-Mp-Jch">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="翻訳のお手伝い" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ags-oL-JyX">
@@ -216,7 +231,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="翻訳を手伝っていただけるとありがたいです!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7eh-1H-pf6">
-                                                    <rect key="frame" x="15" y="34" width="249" height="15"/>
+                                                    <rect key="frame" x="15" y="34" width="249" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -229,18 +244,18 @@
                                         <rect key="frame" x="0.0" y="508" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xGi-bO-LDk" id="86f-4h-y4Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ライセンス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CyM-lj-8zg">
-                                                    <rect key="frame" x="15" y="10" width="72" height="17"/>
+                                                    <rect key="frame" x="15" y="10" width="71.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="このアプリは多くの素晴らしいライブラリを利用してます。作者のみなさま、ありがとうございます！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jii-eD-MNg">
-                                                    <rect key="frame" x="15" y="27" width="344" height="29"/>
+                                                    <rect key="frame" x="15" y="27" width="343.5" height="29"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -253,18 +268,18 @@
                                         <rect key="frame" x="0.0" y="574" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="glb-1Z-cyz" id="MRq-nM-Vfi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="開発情報" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dGb-CU-CqQ">
-                                                    <rect key="frame" x="15" y="17" width="58" height="17"/>
+                                                    <rect key="frame" x="15" y="17" width="57.5" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.47450980390000003" green="0.52549019610000003" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yC2-Nt-aO0">
-                                                    <rect key="frame" x="15" y="34" width="44" height="15"/>
+                                                    <rect key="frame" x="15" y="34" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
