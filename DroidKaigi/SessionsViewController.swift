@@ -98,6 +98,12 @@ class SessionsViewController: UIViewController, UIGestureRecognizerDelegate {
                         sessionView.session = session
                         sessionView.frame = frame
 
+                        sessionView.tapHandler = { [weak self] session in
+                            let detailViewController = self?.storyboard?.instantiateViewController(withIdentifier: String(describing: SessionDetailViewController.self)) as! SessionDetailViewController
+                            detailViewController.session = session
+                            self?.navigationController?.pushViewController(detailViewController, animated: true)
+                        }
+
                         self.scrollView.addSubview(sessionView)
 
                         maxWidth = max(maxWidth, frame.maxX)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		148985C01E71228900F22436 /* SessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148985BF1E71228800F22436 /* SessionDetailViewController.swift */; };
 		14BA511B1E7077EF00E131CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA511A1E7077EF00E131CC /* AppDelegate.swift */; };
 		14BA51221E7077EF00E131CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BA51201E7077EF00E131CC /* Main.storyboard */; };
 		14BA51241E7077EF00E131CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14BA51231E7077EF00E131CC /* Assets.xcassets */; };
@@ -15,7 +16,6 @@
 		14BA51311E7078C100E131CC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51301E7078C100E131CC /* MapViewController.swift */; };
 		14BA51331E7078CC00E131CC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51321E7078CC00E131CC /* InformationViewController.swift */; };
 		14BA51351E7078DD00E131CC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51341E7078DD00E131CC /* SettingsViewController.swift */; };
-		14BA51371E707DD800E131CC /* SessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51361E707DD800E131CC /* SessionsView.swift */; };
 		14BA51391E707DF000E131CC /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA51381E707DF000E131CC /* SessionView.swift */; };
 		14BA513B1E70802700E131CC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513A1E70802700E131CC /* Session.swift */; };
 		14BA513D1E70865B00E131CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BA513C1E70865B00E131CC /* Room.swift */; };
@@ -25,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		148985BF1E71228800F22436 /* SessionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDetailViewController.swift; sourceTree = "<group>"; };
 		14BA51171E7077EF00E131CC /* DroidKaigi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidKaigi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14BA511A1E7077EF00E131CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14BA51211E7077EF00E131CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		14BA51301E7078C100E131CC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14BA51321E7078CC00E131CC /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		14BA51341E7078DD00E131CC /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		14BA51361E707DD800E131CC /* SessionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsView.swift; sourceTree = "<group>"; };
 		14BA51381E707DF000E131CC /* SessionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
 		14BA513A1E70802700E131CC /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		14BA513C1E70865B00E131CC /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
@@ -76,7 +76,7 @@
 			children = (
 				14BA511A1E7077EF00E131CC /* AppDelegate.swift */,
 				14BA512E1E70789400E131CC /* SessionsViewController.swift */,
-				14BA51361E707DD800E131CC /* SessionsView.swift */,
+				148985BF1E71228800F22436 /* SessionDetailViewController.swift */,
 				14BA51381E707DF000E131CC /* SessionView.swift */,
 				14BA513A1E70802700E131CC /* Session.swift */,
 				14BA513C1E70865B00E131CC /* Room.swift */,
@@ -171,11 +171,11 @@
 			files = (
 				14BA51391E707DF000E131CC /* SessionView.swift in Sources */,
 				14BA512F1E70789400E131CC /* SessionsViewController.swift in Sources */,
-				14BA51371E707DD800E131CC /* SessionsView.swift in Sources */,
 				14BA511B1E7077EF00E131CC /* AppDelegate.swift in Sources */,
 				14BA513B1E70802700E131CC /* Session.swift in Sources */,
 				14BA513D1E70865B00E131CC /* Room.swift in Sources */,
 				14BA51311E7078C100E131CC /* MapViewController.swift in Sources */,
+				148985C01E71228900F22436 /* SessionDetailViewController.swift in Sources */,
 				14BA513F1E70868600E131CC /* Speaker.swift in Sources */,
 				14BA51331E7078CC00E131CC /* InformationViewController.swift in Sources */,
 				14BA51351E7078DD00E131CC /* SettingsViewController.swift in Sources */,

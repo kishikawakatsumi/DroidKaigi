@@ -60,7 +60,8 @@ class Session {
     let duration: Int
     let type: String
     let language: String?
-    var isNotify: Bool
+    let desc: String?
+    var isNotify = false
 
     var coordinate: (x: Int, y: Int) {
         let diff = startTime.timeIntervalSinceReferenceDate - zeroDatetime.timeIntervalSinceReferenceDate
@@ -87,8 +88,6 @@ class Session {
     }
 
     var height: Int {
-//        let diff = endTime.timeIntervalSinceReferenceDate - startTime.timeIntervalSinceReferenceDate
-
         if type == "break" {
             return 4
         }
@@ -114,10 +113,11 @@ class Session {
         let duration = session["duration_min"] as! Int
         let type = session["type"] as! String
         let language = session["lang"] as? String
-        self.init(id: id, title: title, room: Room(room: room), speaker: Speaker(speaker: speaker), topic: Topic(topic: topic), date: date, startTime: startTime, endTime: endTime, duration: duration, type: type, language: language)
+        let desc = session["desc"] as? String
+        self.init(id: id, title: title, room: Room(room: room), speaker: Speaker(speaker: speaker), topic: Topic(topic: topic), date: date, startTime: startTime, endTime: endTime, duration: duration, type: type, language: language, desc: desc)
     }
 
-    init(id: Int, title: String, room: Room?, speaker: Speaker?, topic: Topic?, date: Date, startTime: Date, endTime: Date, duration: Int, type: String, language: String?) {
+    init(id: Int, title: String, room: Room?, speaker: Speaker?, topic: Topic?, date: Date, startTime: Date, endTime: Date, duration: Int, type: String, language: String?, desc: String?) {
         self.id = id
         self.title = title
         self.room = room
@@ -129,7 +129,7 @@ class Session {
         self.duration = duration
         self.type = type
         self.language = language
-        self.isNotify = false
+        self.desc = desc
     }
 
 }
