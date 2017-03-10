@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class MapViewController: UIViewController {
 
@@ -21,6 +22,15 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didTapRouteButton(_ sender: Any) {
+        let routeUrl = URL(string: "https://droidkaigi.github.io/2017/route.html")
+        
+        if let routeUrl = routeUrl {
+            let viewController = SFSafariViewController(url: routeUrl)
+            viewController.modalPresentationStyle = .overFullScreen
+            self.present(viewController, animated: true, completion: nil)
+        }
+    }
 
     /*
     // MARK: - Navigation

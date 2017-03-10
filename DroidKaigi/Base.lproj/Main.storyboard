@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -129,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="846" y="231"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Map-->
         <scene sceneID="Tz4-6K-d5o">
             <objects>
                 <viewController id="hIT-1y-eoK" customClass="MapViewController" customModule="DroidKaigi" customModuleProvider="target" sceneMemberID="viewController">
@@ -140,13 +141,111 @@
                     <view key="view" contentMode="scaleToFill" id="WyC-ay-IX8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="floormap.png" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-cD-u6x">
+                                <rect key="frame" x="0.0" y="64" width="375" height="211"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wNM-cD-u6x" secondAttribute="height" multiplier="16:9" id="c45-sO-CbR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AcL-5g-rlu">
+                                <rect key="frame" x="0.0" y="275" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="hkt-D3-mRz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会場" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQ3-y9-cUJ">
+                                <rect key="frame" x="16" y="291" width="68" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="be5-Cd-EZL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.52549019607843139" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="住所" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtD-f4-IYa">
+                                <rect key="frame" x="16" y="321.5" width="68" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="BbU-PV-MOp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.52549019607843139" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ベルサール新宿グランド コンファレンスセンター" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7o-p3-CRb">
+                                <rect key="frame" x="84" y="291" width="275" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VU-Qj-Gtm">
+                                <rect key="frame" x="84" y="395" width="283" height="72"/>
+                                <string key="text">- 丸ノ内線「西新宿駅」 (1番出口徒歩3分)
+- 大江戸線「都庁前駅」 (E4出口徒歩7分)
+- 大江戸線「新宿西口駅」(D4出口徒歩11分)
+- JR線・丸ノ内線･小田急線･京王線・新宿線・大江戸線「新宿駅」 (西口徒歩15分)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGI-XI-uUg">
+                                <rect key="frame" x="84" y="321.5" width="275" height="57.5"/>
+                                <string key="text">〒160-0023
+東京都新宿区西新宿8-17-1
+住友不動産新宿グランドタワー 5F
+ベルサール新宿グランドコンファレンスセンター</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最寄り駅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQx-gL-1GN">
+                                <rect key="frame" x="16" y="395" width="68" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="68" id="lMg-Ly-ptg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.52549019607843139" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MGI-XI-uUg" secondAttribute="trailing" constant="16" id="2xP-7o-1ba"/>
+                            <constraint firstItem="gtD-f4-IYa" firstAttribute="leading" secondItem="WyC-ay-IX8" secondAttribute="leading" constant="16" id="3nC-OI-B7Q"/>
+                            <constraint firstItem="TQx-gL-1GN" firstAttribute="top" secondItem="8VU-Qj-Gtm" secondAttribute="top" id="6Zm-jJ-Zm0"/>
+                            <constraint firstItem="QQ3-y9-cUJ" firstAttribute="leading" secondItem="WyC-ay-IX8" secondAttribute="leading" constant="16" id="AqR-g3-k3J"/>
+                            <constraint firstItem="AcL-5g-rlu" firstAttribute="top" secondItem="wNM-cD-u6x" secondAttribute="bottom" id="ENI-MK-gD3"/>
+                            <constraint firstItem="8VU-Qj-Gtm" firstAttribute="leading" secondItem="TQx-gL-1GN" secondAttribute="trailing" id="HSe-aX-UAz"/>
+                            <constraint firstItem="h7o-p3-CRb" firstAttribute="top" secondItem="wNM-cD-u6x" secondAttribute="bottom" constant="16" id="LCg-c8-PM7"/>
+                            <constraint firstAttribute="trailing" secondItem="8VU-Qj-Gtm" secondAttribute="trailing" constant="8" id="PZZ-g2-r1b"/>
+                            <constraint firstItem="MGI-XI-uUg" firstAttribute="leading" secondItem="gtD-f4-IYa" secondAttribute="trailing" id="QUo-h7-DkG"/>
+                            <constraint firstItem="wNM-cD-u6x" firstAttribute="leading" secondItem="WyC-ay-IX8" secondAttribute="leading" id="S7V-iE-jSq"/>
+                            <constraint firstItem="wNM-cD-u6x" firstAttribute="top" secondItem="m8c-tm-bwC" secondAttribute="bottom" id="T0d-kU-fhD"/>
+                            <constraint firstItem="AcL-5g-rlu" firstAttribute="leading" secondItem="WyC-ay-IX8" secondAttribute="leading" id="WI8-1z-D6E"/>
+                            <constraint firstItem="QQ3-y9-cUJ" firstAttribute="top" secondItem="wNM-cD-u6x" secondAttribute="bottom" constant="16" id="YBm-8M-NQp"/>
+                            <constraint firstItem="8VU-Qj-Gtm" firstAttribute="top" secondItem="MGI-XI-uUg" secondAttribute="bottom" constant="16" id="bxb-d0-wcn"/>
+                            <constraint firstAttribute="trailing" secondItem="h7o-p3-CRb" secondAttribute="trailing" constant="16" id="c5e-D2-Lu1"/>
+                            <constraint firstItem="MGI-XI-uUg" firstAttribute="top" secondItem="h7o-p3-CRb" secondAttribute="bottom" constant="16" id="jld-9S-HGx"/>
+                            <constraint firstItem="TQx-gL-1GN" firstAttribute="leading" secondItem="WyC-ay-IX8" secondAttribute="leading" constant="16" id="nUs-Gg-6ez"/>
+                            <constraint firstItem="h7o-p3-CRb" firstAttribute="leading" secondItem="QQ3-y9-cUJ" secondAttribute="trailing" id="pz5-uY-foN"/>
+                            <constraint firstAttribute="trailing" secondItem="wNM-cD-u6x" secondAttribute="trailing" id="vLv-ta-nbG"/>
+                            <constraint firstAttribute="trailing" secondItem="AcL-5g-rlu" secondAttribute="trailing" id="vnb-ow-odC"/>
+                            <constraint firstItem="gtD-f4-IYa" firstAttribute="top" secondItem="MGI-XI-uUg" secondAttribute="top" id="ynX-s0-NR3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dOK-9p-NuA"/>
+                    <navigationItem key="navigationItem" title="Map" id="dOK-9p-NuA">
+                        <barButtonItem key="rightBarButtonItem" title="route" id="Ifq-sQ-Cq0">
+                            <connections>
+                                <action selector="didTapRouteButton:" destination="hIT-1y-eoK" id="UUy-j8-3d6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlB-vk-iTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="231"/>
+            <point key="canvasLocation" x="1792.8" y="230.73463268365819"/>
         </scene>
         <!--Sessions-->
         <scene sceneID="gSb-Nz-MWy">
@@ -185,4 +284,7 @@
             <point key="canvasLocation" x="1794" y="-452"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="floormap.png" width="1060" height="410"/>
+    </resources>
 </document>
