@@ -138,9 +138,14 @@ class SessionsViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         }.resume()
     }
+    
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        guard event?.type == .motion else { return }
+        guard event?.subtype == .motionShake else { return }
         self.scrollToCurrentTimeSession()
     }
     
